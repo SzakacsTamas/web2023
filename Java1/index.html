@@ -14,16 +14,21 @@
     <p class="info">Még mindig Ronda vagyok</p>
 
     <script>
-        const elem= document.getElementById("info");
+        let elem= document.getElementById("info");
         console.log(elem)
         elem.innerHTML="nap vége";
 
-        elem/document.getElementsByTagName("div");
-        console.log(elem);
-        elem[3].innerHTML+="Valami"
+
 
         elem/document.getElementsByTagName("h2");
         console.log(elem);
+
+        elem=document.getElementsByClassName("info");
+
+        elem=document.getElementById("info");
+        console.log(elem.style.color);
+        elem.style.color="red";
+        elem.style.fontSize="43px";
     </script>
 </body>
 </html>
