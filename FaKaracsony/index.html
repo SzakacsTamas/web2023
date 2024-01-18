@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body onload="init()">
+    <script>
+        function init(){
+            console.log("start");
+            for(let i=0;i<24;i++){
+                gombDisz();
+
+            }
+                    }
+        function gombDisz(){
+            elem=document.createElement("img");
+            elem.src="gomb.jpg";
+            elem.style.height=rand(300,450)+"px";
+            elem.style.position="absolute";
+            
+            elem.style.left=rand(0,1000)+"px";
+            elem.style.top=rand(0,700)+"px";
+            
+            document.getElementById("fenyo").appendChild(elem)
+        }
+
+        function rand(min,max){
+            return Math.floor(Math.random() * (max-min+1))+1;
+        }
+    </script>
+    <div id="fenyo">
+        
+    </div>
+</body>
+</html>

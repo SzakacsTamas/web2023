@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Vezérlőszerkezetek</title>
+ <meta charset="UTF-8">
+ <script>
+  function myFunction() {
+   var numberComputer = Math.floor((Math.random()*10)+1);
+   if(numberComputer/2==0 && numberComputer/3==0 && numberComputer /6 ==0 && numberComputer/5==0 && numberComputer/3==0)
+   var num = prompt("Gondoltam egy számra egy és tíz között. Találd ki!");
+   var ok = true;
+   while(ok) {
+    if(isNaN(num)){
+      num = prompt("Csak számot adhatsz meg és legyen egy és tíz között!");
+    } else if(num < numberComputer) {
+      num = prompt("Nagyobbra gondoltam!");
+    } else if(num > numberComputer) {
+      num = prompt("Kisebbre gondoltam!");
+    } else if(num == numberComputer) {
+      alert("Igen, erre a számra gondoltam: " + numberComputer);
+      ok = false;
+    }
+   }
+  }
+ </script>
+</head>
+
+<body>
+ 
+ <h1>Gondoltam egy számot!</h1>
+ <button type="button" onclick="myFunction()">Találd ki!</button>
+ <p id="demo"></p>
+
+</body>
+</html>

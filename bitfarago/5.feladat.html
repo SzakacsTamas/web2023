@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!-- http://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt -->
+<head>
+ <title>Változók</title>
+ <meta charset="UTF-8">
+ <script>
+ function myFunction() {
+  var x;
+  var temp;
+  var szam=prompt("Kérem írjon be egy számot:");
+  const szamok=[];
+  if (szam!=null)  {
+   for(let i=1;i<11;i++){
+    
+    szamok.push(szam*i)
+   }
+   console.log(szamok);
+    
+   
+   
+
+   document.getElementById("demo").innerHTML=szamok;
+  
+}
+ }
+ </script>
+</head>
+<body>
+
+<h1>Prompt() metódus bemutatása!</h1>
+
+<button onclick="myFunction()">Adatbeolvasás</button>
+
+<p id="demo"></p>
+</body>
+</html>

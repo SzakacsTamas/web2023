@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Függvények és események</title>
+ <meta charset="UTF-8">
+ <script>
+  function szoveg(color){
+    alert("Szövegszín: "+document.getElementById("test").style.color+" -> "+color);
+    document.getElementById("test").style.color=color;
+  }
+  
+ </script>
+
+</head>
+
+<body id="myPage" style="background:lightyellow;" >
+    <div id="test"><b>TESZT SZÖVEG</b></div>
+<h1>Háttérszíncsere egérkatintásra</h1>
+<table style="text-align:center;padding:5px;">
+  <tr>
+    <tr><input TYPE="button" value="Piros szöveg" onclick="szoveg('red')"></tr>
+    <br>
+    <tr><input TYPE="button" value="Kék szöveg" onclick="szoveg('blue')"></tr>
+    <br>
+    <tr><input TYPE="button" value="Zöld szöveg" onclick="szoveg('green')"></tr><br>
+
+
+    <tr><input TYPE="button" value="Barna szöveg" onclick="szoveg('brown')"></tr><br>
+    <tr><input TYPE="button" value="Lila szöveg" onclick="szoveg('purple')"></tr><br>
+    <tr><input TYPE="button" value="Rózsaszín szöveg" onclick="szoveg('pink')"></tr><br>
+    <tr><input TYPE="button" value="Fehér szöveg" onclick="szoveg('white')"></tr><br>
+    <tr><input TYPE="button" value="V. Sárga szöveg" onclick="szoveg('lightyellow')"></tr><br>
+    <tr><input TYPE="button" value="V. Kék szöveg" onclick="szoveg('lightblue')"></tr><br>
+    <tr><input TYPE="button" value="V. Zöld szöveg" onclick="szoveg('lightgreen')"></tr><br>
+    <tr><input TYPE="button" value="Aqua szöveg" onclick="szoveg('aqua')"></tr><br>
+    <tr><input TYPE="button" value="NSárga szöveg" onclick="szoveg('orange')"></tr><br>
+    <tr><input TYPE="button" value="Coral szöveg" onclick="szoveg('coral')"></tr><br>
+    <tr><input TYPE="button" value="S. Kék szöveg" onclick="szoveg('darkblue')"></tr><br>
+    <tr><input TYPE="button" value="S. Zöld szöveg" onclick="szoveg('darkgreen')"></tr><br>
+    <br>
+    <tr><input TYPE="button" value="Eredeti háttér" onclick="Hatter('black')"></tr>
+  </tr>
+</table>
+
+</body>
+</html>
