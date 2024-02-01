@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petőfi Sándor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+    <script>
+        var petofi=[
+            "Petőfi Sándor",
+            "Petrovics Sándor",
+            "1823 január 1., Kiskőrös - 1849, ?",
+            "Jómódú családban született.",
+            "Apja mászáros, anyja cseléd",
+            "Iskolái: Kiskunfélegyháza, Kecskemét, Sárszentlőrinc, Pest, Aszód, Selmecbánya,",
+            
+
+
+        ]
+
+        function init(){
+            let cim=document.createElement("h1");
+            cim.innerHTML=petofi[0];
+
+            cim.onclick=kovetkezo;
+
+            document.getElementsByTagName("body")[0].appendChild(cim);
+
+
+        }
+        init();
+        var szamlalo=0;
+
+        function kovetkezo(){
+            console.log(document.getElementsByTagName("body")[0].lastElementChild)
+            let elem=document.createElement("div");
+
+            
+            elem.innerHTML=petofi[++szamlalo];
+            if(szamlalo<petofi.length){
+                elem.onclick=kovetkezo;
+            }
+            
+            document.getElementsByTagName("body")[0].appendChild(elem);
+        }
+    </script>
+</body>
+</html>
