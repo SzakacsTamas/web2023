@@ -6,11 +6,12 @@ var kepekurl = [
 
 ];
 var pardb = 4;
-var kattintas = 0;
 function init()
 {
     kepkirakas();
 }
+var kattintas = 0;
+let lathatolapok = [];
 function kepkirakas()
 {
     let asztal = document.getElementById("asztal");
@@ -24,16 +25,15 @@ function kepkirakas()
             let uj = document.createElement("div");
             uj.className = "kartya";
             uj.onclick = function(){
-                if (kattintas < 2 &&
-                     typeof uj.dataset.felforditva!=="undifined"&&  uj.dataset.felforditva!="true")
+                //if (typeof uj.dataset.felforditva === 'undefined' || uj.dataset.felforditva === null)
+                //if (lathatolapok.length < 2 &&!(typeof uj.dataset.felforditva !== 'undefined' && uj.dataset.felforditva !== null) &&uj.dataset.felforditva !== "true")
+                if (lathatolapok.length < 2 && !lathatolapok.includes(uj))
                 {
+                    lathatolapok.push(uj);
                     uj.style.backgroundImage = "url(kepek/" + kepekurl[i] + ")";
                     uj.dataset.felforditva = "true";
-                   
-                    kattintas++;
                 }
-                
-                if (kattintas === 2)
+                if (lathatolapok.length === 2)
                 {
                     setTimeout(visszafordit, 2000);
                 }
@@ -51,42 +51,59 @@ function kepkirakas()
     }
 }   
 
+const megtalaltparok = [];
 function visszafordit()
 {
-    const lapok = document.getElementById("asztal").children;
     const aktiv = [];
-    for (let i = 0; i < lapok.length; i++)
+    for (let i = 0; i < lathatolapok.length; i++)
     {
-        if (lapok[i].dataset.felforditva === "true")
+        aktiv.push(lathatolapok[i]);
+    }
+
+    if(aktiv.length >= 2)
+    {
+        if (aktiv[0].style.backgroundImage !== aktiv[1].style.backgroundImage)
         {
-            aktiv.push(lapok[i]);
+            aktiv[0].style.backgroundImage = "";
+            aktiv[1].style.backgroundImage = "";
         }
-    }
-    if (aktiv[0].style.backgroundImage !== aktiv[1].style.backgroundImage)
-    {
-        aktiv[0].style.backgroundImage = "";
-        aktiv[1].style.backgroundImage = "";
-    }
-    else
-    {
-        aktiv[0].onclick = "";
-        aktiv[1].onclick = "";
-        if (!vanemeg())
+        else
         {
-            nyertel();
+            aktiv[0].onclick = "";
+            aktiv[1].onclick = "";
+            megtalaltparok.push(aktiv[0]);
+            megtalaltparok.push(aktiv[1]);
+            if (!vanemeg())
+            {
+                nyertel();
+            }
         }
     }
     aktiv[0].dataset.felforditva = "";
     aktiv[1].dataset.felforditva = "";
 
-    kattintas = 0;
+    const lapok = document.getElementById("asztal").children;
+    for(let i = 0; i < lapok.length; i++)
+    {
+        lapok[i].style.backgroundImage = "";
+    }
+
+    for(let i = 0; i < megtalaltparok.length; i++)
+    {
+        megtalaltparok[i].style.backgroundImage = "";
+    }
+
+    lathatolapok = [];
 }
+
+
+function oraStart()
 
 function nyertel()
 {
-    let uj = doucment.createElement("div");
+    let uj = document.createElement("div");
     uj.innerHTML = "Game over";
-
+    document.getElementsByTagName("header")[0].appendChild(uj);
     
 }
 
@@ -114,3 +131,4 @@ function kever(points)
   }
   return points;
 }
+
