@@ -5,12 +5,12 @@
 
 /* 31 a váltószám*/
 #start{
-    width: 30px;
+    width: 65px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 272px;
+    left: 437px;
 }
 #m1{
     width: 30px;
@@ -218,96 +218,110 @@
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 108px;
+    left: 224px;
+    transform: rotate(180deg);
 }#m27{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 108px;
+    left: 254px;
+    transform: rotate(180deg);
 }#m28{
-    width: 30px;
-    height: 77px;
+    width: 90px;
+    height: 65px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 123px;
+    left: 285px;
+    transform: rotate(180deg);
 }#m29{
     width: 30px;
-    height: 77px;
-    background-color: red;
+    height: 85px;
+    background-color: green;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 65px;
+    left: 310px;
+    transform: rotate(90deg);
 }#m30{
-    width: 30px;
-    height: 77px;
+    width: 90px;
+    height: 65px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 20px;
+    left: 285px;
+    transform: rotate(180deg);
 }#m31{
     width: 30px;
-    height: 77px;
-    background-color: red;
+    height: 78px;
+    background-color: green;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 15px;
+    left: 376px;
+    transform: rotate(180deg);
 }#m32{
     width: 30px;
-    height: 77px;
-    background-color: red;
+    height: 78px;
+    background-color: green;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 15px;
+    left: 405px;
+    transform: rotate(180deg);
 }#m33{
-    width: 30px;
-    height: 77px;
-    background-color: red;
+    width: 65px;
+    height: 78px;
+    background-color: green;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 15px;
+    left: 435px;
+    transform: rotate(180deg);
 }#m34{
     width: 30px;
     height: 77px;
-    background-color: red;
+    background-color: blue;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 70px;
+    left: 447px;
+    transform: rotate(270deg);
 }#m35{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 100px;
+    left: 447px;
+    transform: rotate(270deg);
 }#m36{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 130px;
+    left: 447px;
+    transform: rotate(270deg);
 }#m37{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 160px;
+    left: 447px;
+    transform: rotate(270deg);
 }#m38{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;
+    top: 190px;
+    left: 447px;
+    transform: rotate(270deg);
 }#m39{
     width: 30px;
     height: 77px;
     background-color: red;
     position: absolute;
-    top: 271px;
-    left: 314.8px;}
+    top: 220px;
+    left: 447px;
+    transform: rotate(270deg);}
