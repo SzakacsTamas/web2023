@@ -1,55 +1,134 @@
-var kepekUrl=["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
+var kepekurl = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
 
-
-var parDb = 4;
-var kattintas=0
-
+];
+var pardb = 4;
 function init()
 {
-    kepKirakas();
+    kepkirakas();
 }
-
-function kepKirakas()
+var kattintas = 0;
+let lathatolapok = [];
+function kepkirakas()
 {
-    
     let asztal = document.getElementById("asztal");
 
     let kartyak = [];
 
-    for(let k = 0; k < 2; k++)
+    for(let j = 0; j < 2; j++)
     {
-        for(let i=0; i < parDb;i++)
+        for(let i = 0; i < pardb; i++)
         {
-            /*let uj = document.createElement("img");
-            uj.src="kepek/" + kepekUrl[i];
-            asztal.appendChild(uj);
-            */
-
             let uj = document.createElement("div");
-            uj.className="kartya";
-            uj.onclick=function(){uj.style.backgroundImage="url(kepek/" + kepekUrl[i] + ")"};
-            //asztal.appendChild(uj);
+            uj.className = "kartya";
+            uj.onclick = function(){
+                //if (typeof uj.dataset.felforditva === 'undefined' || uj.dataset.felforditva === null)
+                //if (lathatolapok.length < 2 &&!(typeof uj.dataset.felforditva !== 'undefined' && uj.dataset.felforditva !== null) &&uj.dataset.felforditva !== "true")
+                if (lathatolapok.length < 2 && !lathatolapok.includes(uj))
+                {
+                    lathatolapok.push(uj);
+                    uj.style.backgroundImage = "url(kepek/" + kepekurl[i] + ")";
+                    uj.dataset.felforditva = "true";
+                }
+                if (lathatolapok.length === 2)
+                {
+                    setTimeout(visszafordit, 2000);
+                }
+            };
+            
             kartyak.push(uj);
-
         }
     }
-    kartyak=kever(kartyak);
 
-    for(let i=0; i < kartyak.length; i++)
+    kartyak = kever(kartyak);
+
+    for(let i = 0; i < kartyak.length; i++)
     {
-    asztal.appendChild(kartyak[i]);
+        asztal.appendChild(kartyak[i]);
     }
+}   
+
+const megtalaltparok = [];
+function visszafordit()
+{
+    const aktiv = [];
+    for (let i = 0; i < lathatolapok.length; i++)
+    {
+        aktiv.push(lathatolapok[i]);
+    }
+
+    if(aktiv.length >= 2)
+    {
+        if (aktiv[0].style.backgroundImage !== aktiv[1].style.backgroundImage)
+        {
+            aktiv[0].style.backgroundImage = "";
+            aktiv[1].style.backgroundImage = "";
+        }
+        else
+        {
+            aktiv[0].onclick = "";
+            aktiv[1].onclick = "";
+            megtalaltparok.push(aktiv[0]);
+            megtalaltparok.push(aktiv[1]);
+            if (!vanemeg())
+            {
+                nyertel();
+            }
+        }
+    }
+    aktiv[0].dataset.felforditva = "";
+    aktiv[1].dataset.felforditva = "";
+
+    const lapok = document.getElementById("asztal").children;
+    for(let i = 0; i < lapok.length; i++)
+    {
+        lapok[i].style.backgroundImage = "";
+    }
+
+    for(let i = 0; i < megtalaltparok.length; i++)
+    {
+        megtalaltparok[i].style.backgroundImage = "";
+    }
+
+    lathatolapok = [];
+}
+
+
+function oraStart()
+
+function nyertel()
+{
+    let uj = document.createElement("div");
+    uj.innerHTML = "Game over";
+    document.getElementsByTagName("header")[0].appendChild(uj);
     
 }
 
-function kever(points) {
-
-    for (let i = points.length -1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i+1));
-      let k = points[i];
-      points[i] = points[j];
-      points[j] = k;
+function vanemeg()
+{
+    let db = 0;
+    const lapok = document.getElementById("asztal").children;
+    for (let i = 0; i < lapok.length; i++)
+    {
+        if (lapok[i].style.backgroundImage === "")
+        {
+            db++;
+        }
     }
-
-    return points;
+    return db > 0;
 }
+
+function kever(points) 
+{
+  for (let i = points.length -1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i+1));
+    let k = points[i];
+    points[i] = points[j];
+    points[j] = k;
+  }
+  return points;
+}
+
