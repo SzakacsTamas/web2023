@@ -1,10 +1,58 @@
+.jatekos{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+#kocka{
+    background-image: url(k.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.figura1{
+    background-image: url("babuk/figura1.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura2{
+    background-image: url("babuk/figura2.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura3{
+    background-image: url("babuk/figura3.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura4{
+    background-image: url("babuk/figura4.png");
+    background-size: cover;
+    background-color: white;
+}
+
+
+#tabla{
+    background-image: url("hatter.jpg");
+    height: 320px;
+    width: 500px;
+    background-size: cover;
+}
+
+
 #minden{
     width: 500px;
 }
 
 
 /* 31 a váltószám*/
-#start{
+#m0{
     width: 65px;
     height: 77px;
     position: absolute;

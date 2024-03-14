@@ -9,6 +9,8 @@
     <h1>Latin Táncok</h1>
     <div class="gomb" onclick="feladat2()">2. Feladat</div>
     <div class="megoldas" id="feladat2"></div>
+    <div class="gomb" onclick="feladat3()">3. Feladat</div>
+    <div class="megoldas" id="feladat3"></div>
     <script>
 
         class Par{
@@ -23,18 +25,37 @@
         
 
        
-        //console.log(sorok);
+        
         const tancok=[];
-        for(let i=0;i<tancok.length;i+=3){
+        for(let i=0;i<sorok.length;i+=3){
             //console.log(i,sorok[i],sorok[i+1])
             tancok.push(new Par(sorok[i],sorok[i+1],sorok[i+2],))
         }
-        console.log(tancok);
-
+        //console.log(tancok);
+        console.log(tancok.tancNev);
         function feladat2(){
             const szoveg="Az elsőként bemutatott tánc a "+tancok[0].tancNev+"volt, az utolsó pedig "+tancok[tancok.length-1].tancNev+" volt";
-            document.getElementById("feladat2").innerHTML=szoveg;
+            ir("feladat2",szoveg)
+            
+        }
 
+        function feladat3(){
+            let darab=0;    //I
+            //anonim fuggvény V
+            tancok.forEach(function(ertek){
+                if(ertek.tanc=="samba")
+                darab++;})
+
+            
+            
+            ir("feladat3","Sambat "+darab+" ember táncolt")};
+        
+        function ir(hova,mi){
+            document.getElementById(hova).innerHTML=mi;
+        };
+
+        function feladat4(){
+            const vilmaTancai=tancok.filter())
         }
     </script>
 </body>
