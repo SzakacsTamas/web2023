@@ -16,8 +16,12 @@
     <div class="megoldas" id="feladat4"></div>
     <div class="gomb" onclick="feladat5()">5. feladat</div>
     <label for="tancnev">Tánc neve: </label>
-    <input type="text" id="tancnevinput" name="tancnev">
+    <input type="text" id="tancNev" name="tancnev" oninput="feladat5()">
     <div class="megoldas" id="feladat5"></div>
+    <div class="gomb" onclick="feladat6()">6. feladat</div>
+    <div class="megoldas" id="feladat6"></div>
+    <div class="gomb" onclick="feladat7()">7. feladat</div>
+    <div class="megoldas" id="feladat7"></div>
 
     <script>
 class Par {
@@ -63,12 +67,58 @@ function feladat4(){
         ir("feladat4", vilmatancok);
 }
 
+
+
+
+
 function feladat5(){
+    let nev=document.getElementById("tancNev").value;
+    
     const VilmaTancai=tancok.filter(function(v){
-        if(v.lany=="Vilma")
+        if(v.lany=="Vilma" && v.tanc==nev)
         return v;
     });
-    ir("feladat5","Vilma a következőt táncolta: ")
+    console.log(VilmaTancai)
+    if(VilmaTancai.length===0){
+        ir("feladat5","Vilma nem táncolt "+nev+"-t.");
+    }
+    else{
+        ir("feladat5","A "+nev+" bemutatóján Vilma párja "+VilmaTancai[0].fiu+" volt.");
+    }
+   
+}
+
+function feladat6()
+{
+    const lany=[];
+    const fiu=[];
+    tancok.forEach(function(value){
+        
+        if(!lany.includes(value.lany)){
+        lany.push(value.lany);
+        
+    }
+        else if(!fiu.includes(value.fiu)){
+            fiu.push(value.fiu);
+        }
+        
+        
+    });
+    ir("feladat6","Lanyok: "+lany.join(", ")+"<br> Fiuk: "+fiu.join(", "));
+console.log(fiu)
+console.log(lany)
+   
+}
+
+
+function feladat7()
+{
+    const lanyok={};
+    tancok.forEach(function(v)
+    {
+        lanyok[]
+    })
+
 }
     </script>
 </body>
