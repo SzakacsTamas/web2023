@@ -4,17 +4,19 @@ function tablaKeszit(){
   for(let i=0;i<40;i++){
     let mezo=document.createElement("div");
     mezo.id="m"+i;
-    mezo.innerHTML=mezo.id;
+    //mezo.innerHTML=mezo.id;
     t.appendChild(mezo);
   }
 }
+let kovetkezoEmber=0;
 
 function init(){
   tablaKeszit();
   for(let i=0; i<jatekosok.length;i++){
-    console.dir("asd");
+    
     jatekosok[i].ugorjIde(0);
   }
+  jatekosok[kovetkezoEmber].next();
   /*
   for(let i=0; i<jatekosok.length;i++)
   {
@@ -22,14 +24,31 @@ function init(){
     break;
   }
   */
-  setTimeout(function(){jatekosok[0].ugorjIde(kocka())},1000);
+  //setTimeout(function(){jatekosok[0].ugorjIde(kocka())},1000);
   //setTimeout(function(){jatekosok[1].ugorjIde(4)},2000);
+
 }
 
 
   
 function kocka(){
-  Math.floor(Math.random() * 6+1)
+  console.dir("asdasd")
+
+  let szam=Math.floor(Math.random() * 6+1)
+  jatekosok[kovetkezoEmber].lepjElore(szam);
+  
+
+
+  jatekosok[kovetkezoEmber].unnext();
+  //setTimeout(function(){alert("készen vagy?")},1000);
+  kovetkezoEmber++;
+  if(kovetkezoEmber>=jatekosok.length){
+    kovetkezoEmber-=jatekosok.length;
+  }
+  jatekosok[kovetkezoEmber].next();
+  
+  return szam;
+
 }
 
 class jatekos {
@@ -42,12 +61,39 @@ class jatekos {
       kep.classList.add("jatekos");
       kep.classList.add(this.karakter);
       this.kep=kep;
-
+      
       
 
     }
+    unnext(){
+      this.kep.classList.remove("aktualis");
+      
+      
+      
+
+    }
+    next(){
+      this.kep.classList.add("aktualis");
+      let adatokProgram=document.getElementById("adatok");
+      //adatokProgram.classList.add(jatekos);
+      document.getElementById("nev").innerHTML = this.nev;
+      console.log(this.nev)
+      
+      
+    }
+    
+    lepjElore(mennyit){
+      let ujpoz=this.pozicio+mennyit;
+      if(ujpoz>39){
+        ujpoz-=40;
+      }
+      this.ugorjIde(ujpoz);
+
+    }
+
     ugorjIde(hova) {
       if(this.pozicio==undefined){
+        //ITT ÁLL
         this.pozicio=hova;
         
         let kovetkezo=document.getElementById("m"+this.pozicio);
