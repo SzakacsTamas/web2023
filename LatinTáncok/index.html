@@ -1,62 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Latin táncok</title>
 </head>
 <body>
-    <h1>Latin Táncok</h1>
-    <div class="gomb" onclick="feladat2()">2. Feladat</div>
+    <h1>Latin táncok</h1>
+    <div class="gomb" onclick="feladat2()">2. feladat</div>
     <div class="megoldas" id="feladat2"></div>
-    <div class="gomb" onclick="feladat3()">3. Feladat</div>
+    <div class="gomb" onclick="feladat3()">3. feladat</div>
     <div class="megoldas" id="feladat3"></div>
+    <div class="gomb" onclick="feladat4()">4. feladat</div>
+    <div class="megoldas" id="feladat4"></div>
+    <div class="gomb" onclick="feladat5()">5. feladat</div>
+    <label for="tancnev">Tánc neve: </label>
+    <input type="text" id="tancNev" name="tancnev" oninput="feladat5()">
+    <div class="megoldas" id="feladat5"></div>
+    <div class="gomb" onclick="feladat6()">6. feladat</div>
+    <div class="megoldas" id="feladat6"></div>
+    <div class="gomb" onclick="feladat7()">7. feladat</div>
+    <div class="megoldas" id="feladat7"></div>
+
     <script>
+class Par {
+    constructor(tanc, lany, fiu){
+        this.tanc = tanc;
+        this.fiu = fiu;
+        this.lany = lany;
+    }
+}
 
-        class Par{
-            constructor(tancNev,fiuNev,lanyNev){
-                this.tancNev=tancNev;
-                this.fiuNev=fiuNev;
-                this.lanyNev=lanyNev;
-            }
-        }
-        const forras="cha-cha\nLuca\nKelemen\ncha-cha\nKatalin\nBertalan\ncha-cha\nAdrienn\nLajos\ncha-cha\nEmma\nIgor\ncha-cha\nVilma\nKolos\ncha-cha\nSzilvia\nAlfonz\ncha-cha\nElza\nTivadar\ncha-cha\nFruzsina\nEde\nsalsa\nSzilvia\nImre\nsalsa\nJudit\nAttila\nsalsa\nKatalin\nBertalan\nsalsa\nGabriella\nKelemen\nsalsa\nIrma\nKolos\nsalsa\nFruzsina\nTivadar\nrumba\nEmma\nAlfonz\nrumba\nSzilvia\nAttila\nrumba\nKatalin\nBertalan\nrumba\nAdrienn\nLajos\nrumba\nLuca\nKelemen\nrumba\nJudit\nKolos\nrumba\nElza\nSalamon\nrumba\nVilma\nImre\nrumba\nFruzsina\nTivadar\nrumba\nIrma\nMarcell\nsamba\nGabriella\nAlfonz\nsamba\nSzilvia\nIgor\nsamba\nElza\nKelemen\nsamba\nKatalin\nBertalan\nsamba\nAdrienn\nLajos\nsamba\nEmma\nKolos\nsamba\nLuca\nAttila\nsamba\nIrma\nImre\nsamba\nSzabina\nEde\nsamba\nFruzsina\nMarcell\njive\nEmma\nAttila\njive\nKatalin\nBertalan\njive\nElza\nKelemen\njive\nJudit\nKolos\njive\nIrma\nMarcell\njive\nSzilvia\nAlfonz\ntango\nVilma\nTivadar\ntango\nKatalin\nBertalan\ntango\nAdrienn\nLajos\ntango\nIrma\nKolos\ntango\nLuca\nSalamon\ntango\nEmma\nImre\ntango\nGabriella\nIgor\ntango\nElza\nAlfonz\ntango\nJudit\nAttila\ntango\nSzilvia\nKelemen\ntango\nFruzsina\nEde\ntango\nSzabina\nMarcell\nbachata\nKatalin\nBertalan\nbachata\nEmma\nKelemen\nbachata\nIrma\nEde\nbachata\nSzilvia\nIgor\nbachata\nLuca\nAlfonz\nbachata\nElza\nAttila\n"
-        const sorok=forras.trimEnd().split("\n");
+const tancrend = "cha-cha\nLuca\nKelemen\ncha-cha\nKatalin\nBertalan\ncha-cha\nAdrienn\nLajos\ncha-cha\nEmma\nIgor\ncha-cha\nVilma\nKolos\ncha-cha\nSzilvia\nAlfonz\ncha-cha\nElza\nTivadar\ncha-cha\nFruzsina\nEde\nsalsa\nSzilvia\nImre\nsalsa\nJudit\nAttila\nsalsa\nKatalin\nBertalan\nsalsa\nGabriella\nKelemen\nsalsa\nIrma\nKolos\nsalsa\nFruzsina\nTivadar\nrumba\nEmma\nAlfonz\nrumba\nSzilvia\nAttila\nrumba\nKatalin\nBertalan\nrumba\nAdrienn\nLajos\nrumba\nLuca\nKelemen\nrumba\nJudit\nKolos\nrumba\nElza\nSalamon\nrumba\nVilma\nImre\nrumba\nFruzsina\nTivadar\nrumba\nIrma\nMarcell\nsamba\nGabriella\nAlfonz\nsamba\nSzilvia\nIgor\nsamba\nElza\nKelemen\nsamba\nKatalin\nBertalan\nsamba\nAdrienn\nLajos\nsamba\nEmma\nKolos\nsamba\nLuca\nAttila\nsamba\nIrma\nImre\nsamba\nSzabina\nEde\nsamba\nFruzsina\nMarcell\njive\nEmma\nAttila\njive\nKatalin\nBertalan\njive\nElza\nKelemen\njive\nJudit\nKolos\njive\nIrma\nMarcell\njive\nSzilvia\nAlfonz\ntango\nVilma\nTivadar\ntango\nKatalin\nBertalan\ntango\nAdrienn\nLajos\ntango\nIrma\nKolos\ntango\nLuca\nSalamon\ntango\nEmma\nImre\ntango\nGabriella\nIgor\ntango\nElza\nAlfonz\ntango\nJudit\nAttila\ntango\nSzilvia\nKelemen\ntango\nFruzsina\nEde\ntango\nSzabina\nMarcell\nbachata\nKatalin\nBertalan\nbachata\nEmma\nKelemen\nbachata\nIrma\nEde\nbachata\nSzilvia\nIgor\nbachata\nLuca\nAlfonz\nbachata\nElza\nAttila\n";
+const sorok = tancrend.trimEnd().split("\n");
+
+const tancok = [];
+for (let i = 0; i < sorok.length; i += 3){
+    tancok.push(new Par(sorok[i], sorok[i + 1], sorok[i + 2]));
+}
+
+function ir(hova, mit){
+    document.getElementById(hova).innerHTML = mit;
+}
+
+function feladat2(){
+    const szoveg = "Az elsőként bemutatott tánc a " + tancok[0].tanc + " volt, az utolsó pedig a " + tancok[tancok.length - 1].tanc + ".";
+    ir("feladat2", szoveg);
+}
+
+function feladat3(){
+    let darab = 0;
+    tancok.forEach(function(ertek)
+        {if (ertek.tanc === "samba") {
+            darab++
+        }});
+    ir("feladat3", darab);
+}
+
+function feladat4(){
+    let vilmatancok = [];
+    tancok.forEach(function(ertek)
+        {if (ertek.lany === "Vilma" && !vilmatancok.includes(ertek.tanc)) {
+            vilmatancok.push(ertek.tanc)
+        }});
+        ir("feladat4", vilmatancok);
+}
+
+
+
+
+
+function feladat5(){
+    let nev=document.getElementById("tancNev").value;
+    
+    const VilmaTancai=tancok.filter(function(v){
+        if(v.lany=="Vilma" && v.tanc==nev)
+        return v;
+    });
+    console.log(VilmaTancai)
+    if(VilmaTancai.length===0){
+        ir("feladat5","Vilma nem táncolt "+nev+"-t.");
+    }
+    else{
+        ir("feladat5","A "+nev+" bemutatóján Vilma párja "+VilmaTancai[0].fiu+" volt.");
+    }
+   
+}
+
+function feladat6()
+{
+    const lany=[];
+    const fiu=[];
+    tancok.forEach(function(value){
         
-
-       
+        if(!lany.includes(value.lany)){
+        lany.push(value.lany);
         
-        const tancok=[];
-        for(let i=0;i<sorok.length;i+=3){
-            //console.log(i,sorok[i],sorok[i+1])
-            tancok.push(new Par(sorok[i],sorok[i+1],sorok[i+2],))
+    }
+        else if(!fiu.includes(value.fiu)){
+            fiu.push(value.fiu);
         }
-        //console.log(tancok);
-        console.log(tancok.tancNev);
-        function feladat2(){
-            const szoveg="Az elsőként bemutatott tánc a "+tancok[0].tancNev+"volt, az utolsó pedig "+tancok[tancok.length-1].tancNev+" volt";
-            ir("feladat2",szoveg)
-            
-        }
-
-        function feladat3(){
-            let darab=0;    //I
-            //anonim fuggvény V
-            tancok.forEach(function(ertek){
-                if(ertek.tanc=="samba")
-                darab++;})
-
-            
-            
-            ir("feladat3","Sambat "+darab+" ember táncolt")};
         
-        function ir(hova,mi){
-            document.getElementById(hova).innerHTML=mi;
-        };
+        
+    });
+    ir("feladat6","Lanyok: "+lany.join(", ")+"<br> Fiuk: "+fiu.join(", "));
+console.log(fiu)
+console.log(lany)
+   
+}
 
-        function feladat4(){
-            const vilmaTancai=tancok.filter())
-        }
+
+function feladat7()
+{
+    const lanyok={};
+    tancok.forEach(function(v)
+    {
+        lanyok[]
+    })
+
+}
     </script>
 </body>
 </html>
