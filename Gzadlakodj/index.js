@@ -30,25 +30,45 @@ function init(){
 }
 
 
+let dobottKor = 1; // változó a jelenlegi körben már dobott játékosok követésére
+let korokSzama=0;
+function rollDice() {
   
+    if (dobottKor>0) { // csak akkor dobhat, ha még nem dobott ebben a körben
+        let dobottErtek = kocka();
+        
+        jatekosok[kovetkezoEmber].lepjElore(dobottErtek);
+        dobottKor -=1; // beállítjuk, hogy már dobott ebben a körben
+        document.getElementById("dobas").innerHTML ="Dobásaid száma: "+dobottKor;
+    } else {
+        console.log("Már dobott a játékos ebben a körben!");
+        
+    }
+}
+
+function switchToNextPlayer() {
+    if (dobottKor===0) { // csak akkor váltunk a következő játékosra, ha már legalább egyszer dobott
+        jatekosok[kovetkezoEmber].unnext(); // előző játékos "leveszése"
+        kovetkezoEmber++; // következő játékosra váltás
+        
+        document.getElementById("aktivEsemeny").innerHTML = '';//LEVESZEM A VIZUÁLIS MEGJELENitest
+        
+        if (kovetkezoEmber >= jatekosok.length) {
+            kovetkezoEmber = 0; // visszatérés az első játékostól, ha már mindenki dobott
+        }
+        jatekosok[kovetkezoEmber].next(); // következő játékos kiválasztása
+        korokSzama+=1;
+        dobottKor = 1; // új kör kezdődött, visszaállítjuk az állapotot
+        document.getElementById("dobas").innerHTML ="Dobásaid száma: "+dobottKor;
+        console.dir(korokSzama)
+    } else {
+        console.log("Még nem dobott a játékos ebben a körben!");
+    }
+}
+
 function kocka(){
-  console.dir("asdasd")
-
-  let szam=Math.floor(Math.random() * 6+1)
-  jatekosok[kovetkezoEmber].lepjElore(szam);
-  
-
-
-  jatekosok[kovetkezoEmber].unnext();
-  //setTimeout(function(){alert("készen vagy?")},1000);
-  kovetkezoEmber++;
-  if(kovetkezoEmber>=jatekosok.length){
-    kovetkezoEmber-=jatekosok.length;
-  }
-  jatekosok[kovetkezoEmber].next();
-  
+  let szam=Math.floor(Math.random() * 6 + 1);
   return szam;
-
 }
 
 class jatekos {
@@ -65,18 +85,24 @@ class jatekos {
       
 
     }
-    unnext(){
-      this.kep.classList.remove("aktualis");
-      
-      
-      
+  
+  unnext(){
+    this.kep.classList.remove("aktualis");
+    
+    
+    
 
-    }
+  }
     next(){
       this.kep.classList.add("aktualis");
-      let adatokProgram=document.getElementById("adatok");
+      
       //adatokProgram.classList.add(jatekos);
+      //ITT LEHET MEGVÁLTOZTATNI A KIIRATOTT ADATOKAT
       document.getElementById("nev").innerHTML = this.nev;
+      document.getElementById("penz").innerHTML="Egyenleg: "+this.penz+"Ft";
+      document.getElementById("dobas").innerHTML ="Dobásaid száma: "+dobottKor;
+      //document.getElementById("ikon").innerHTML = '<img src="">';
+      
       console.log(this.nev)
       
       
@@ -92,22 +118,38 @@ class jatekos {
     }
 
     ugorjIde(hova) {
-      if(this.pozicio==undefined){
-        //ITT ÁLL
-        this.pozicio=hova;
-        
-        let kovetkezo=document.getElementById("m"+this.pozicio);
-        kovetkezo.appendChild(this.kep);
+      if (this.pozicio !== undefined) {
+          let elozoMezo = document.getElementById("m" + this.pozicio);
+          elozoMezo.removeChild(this.kep);
       }
-      else{
-        let elozo=document.getElementById("m"+this.pozicio);
-        elozo.removeChild(this.kep);
-        this.pozicio=hova;
-        let kovetkezo=document.getElementById("m"+this.pozicio);
-        kovetkezo.appendChild(this.kep);
+      //ITT ÁLL
+      this.pozicio = hova;
+      let kovetkezoMezo = document.getElementById("m" + this.pozicio);
+      kovetkezoMezo.appendChild(this.kep);
+
+      // MEZŐ VIZSGÁLATA
+      switch (hova) {
+          //CASE MEZO : ESEMÉNY, VIZUÁLIS MEGJELENités
+              case 1:
+              this.penz -= 1000; 
+              document.getElementById("aktivEsemeny").innerHTML = '<img src="penzek/500.png">';
+              document.getElementById("penz").innerHTML="Egyenleg: "+this.penz+"Ft";
+              break;
+              //SZERENCSEKARTYA
+              case 2:
+                case 9:
+                  case 15:
+                    case 22:
+                      case 31:
+                        case 35:
+                          document.getElementById("aktivEsemeny").innerHTML = '<img src="penzek/500.png">';
+
+          
+        
       }
 
-    }
+      
+  }
   }
 
 
@@ -117,3 +159,5 @@ jatekosok[0]=new jatekos("Tomi","figura1",75000)
 jatekosok[1]=new jatekos("Petya","figura2",75000)
 jatekosok[2]=new jatekos("Gabi","figura3",75000)
 jatekosok[3]=new jatekos("Jazmin","figura4",75000)
+
+

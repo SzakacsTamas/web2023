@@ -9,13 +9,28 @@
 </head>
 <body onload="init()">
     <div id="tabla"></div>
-    <div id="kocka" onclick="kocka()"></div>
+    <div id="kocka" onclick="rollDice()"></div>
     <div id="adatok">
-        <div id="nev"></div>
-        <div></div>
-        <div></div>
+        
+        <h1 id="nev" class="szalagCim"></h1>
+        <div id="ikon"></div>
+        <div id="penz"></div>
+        <div id="dobas"></div>
+        <button id="done" onclick="switchToNextPlayer()" class="FoGomb">Kész</button>
     </div>
-    <div id="done">Kész</div>
+    <div id="esemeny">
+        <h1>Esemény</h1>
+        <div id="aktivEsemeny"></div>
+    </div>
+    <div class="penzKep">
+        <img src="penzek/500.png" alt="">
+        <img src="penzek/1000.png" alt="">
+        <img src="penzek/2000.png" alt="">
+        <img src="penzek/5000.png" alt="">
+        <img src="penzek/10000.png" alt="">
+        <img src="penzek/20000.png" alt="">
+
+    </div>
     
 
     
