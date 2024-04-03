@@ -46,7 +46,7 @@ function rollDice() {
     }
 }
 
-function switchToNextPlayer() {
+function valtasKovetkezoEmberre() {
     if (dobottKor===0) { // csak akkor váltunk a következő játékosra, ha már legalább egyszer dobott
         jatekosok[kovetkezoEmber].unnext(); // előző játékos "leveszése"
         kovetkezoEmber++; // következő játékosra váltás
@@ -132,7 +132,8 @@ class jatekos {
           //CASE MEZO : ESEMÉNY, VIZUÁLIS MEGJELENités
               case 1:
               this.penz -= 1000; 
-              document.getElementById("aktivEsemeny").innerHTML = '<img src="penzek/500.png">';
+              //document.getElementById("aktivEsemeny").innerHTML = '<img src="esemenyek/27.png">';
+              document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny27" class="esemenyKartya"></div>';
               document.getElementById("penz").innerHTML="Egyenleg: "+this.penz+"Ft";
               break;
               //SZERENCSEKARTYA
@@ -143,10 +144,11 @@ class jatekos {
                       case 31:
                         case 35:
                           document.getElementById("aktivEsemeny").innerHTML = '<img src="penzek/500.png">';
-
+                          
           
         
       }
+      document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny'+hova+'" class="esemenyKartya"></div>';
 
       
   }

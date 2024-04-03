@@ -13,7 +13,7 @@
     background-color: green!important;
 }
 img{
-    width: 300px;
+    width: 350px;
     height: 320px;
 }
 #adatok{
@@ -31,6 +31,61 @@ img{
     background-image: url(f.png);
     
 }
+#aktivEsemeny img{
+    width: 70px;
+    height: 100px;
+    width: 30%;
+    height: 30%;
+}
+
+.esemenyKartya{
+    width: 70px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#esemeny01{background-image: url(esemenyek/01.png);}
+#esemeny02{background-image: url(esemenyek/02.png);}
+#esemeny03{background-image: url(esemenyek/03.png);}
+#esemeny04{background-image: url(esemenyek/04.png);}
+#esemeny05{background-image: url(esemenyek/05.png);}
+#esemeny06{background-image: url(esemenyek/06.png);}
+#esemeny07{background-image: url(esemenyek/07.png);}
+#esemeny08{background-image: url(esemenyek/08.png);}
+#esemeny09{background-image: url(esemenyek/09.png);}
+#esemeny10{background-image: url(esemenyek/10.png);}
+#esemeny11{background-image: url(esemenyek/11.png);}
+#esemeny12{background-image: url(esemenyek/12.png);}
+#esemeny13{background-image: url(esemenyek/13.png);}
+#esemeny14{background-image: url(esemenyek/14.png);}
+#esemeny15{background-image: url(esemenyek/15.png);}
+#esemeny16{background-image: url(esemenyek/16.png);}
+#esemeny17{background-image: url(esemenyek/17.png);}
+#esemeny18{background-image: url(esemenyek/18.png);}
+#esemeny19{background-image: url(esemenyek/19.png);}
+#esemeny20{background-image: url(esemenyek/20.png);}
+#esemeny21{background-image: url(esemenyek/21.png);}
+#esemeny22{background-image: url(esemenyek/22.png);}
+#esemeny23{background-image: url(esemenyek/23.png);}
+#esemeny24{background-image: url(esemenyek/24.png);}
+#esemeny25{background-image: url(esemenyek/25.png);}
+#esemeny26{background-image: url(esemenyek/26.png);}
+#esemeny27{background-image: url(esemenyek/27.png);}
+#esemeny28{background-image: url(esemenyek/28.png);}
+#esemeny29{background-image: url(esemenyek/29.png);}
+#esemeny30{background-image: url(esemenyek/30.png);}
+#esemeny31{background-image: url(esemenyek/31.png);}
+#esemeny32{background-image: url(esemenyek/32.png);}
+#esemeny33{background-image: url(esemenyek/33.png);}
+#esemeny34{background-image: url(esemenyek/34.png);}
+#esemeny35{background-image: url(esemenyek/35.png);}
+#esemeny36{background-image: url(esemenyek/36.png);}
+#esemeny37{background-image: url(esemenyek/37.png);}
+#esemeny38{background-image: url(esemenyek/38.png);}
+#esemeny39{background-image: url(esemenyek/39.png);}
+#esemeny40{background-image: url(esemenyek/40.png);}
+
 #esemeny{
     width: 170px;
     height: 150px;
