@@ -12,10 +12,7 @@
 .jatekos.elozo{
     background-color: green!important;
 }
-img{
-    width: 350px;
-    height: 320px;
-}
+
 #adatok{
     width: 110px;
     height: 150px;
@@ -45,28 +42,33 @@ img{
     background-repeat: no-repeat;
     margin: auto;
 }
-#esemeny01{background-image: url(esemenyek/01.png);}
-#esemeny02{background-image: url(esemenyek/02.png);}
-#esemeny03{background-image: url(esemenyek/03.png);}
-#esemeny04{background-image: url(esemenyek/04.png);}
-#esemeny05{background-image: url(esemenyek/05.png);}
-#esemeny06{background-image: url(esemenyek/06.png);}
-#esemeny07{background-image: url(esemenyek/07.png);}
-#esemeny08{background-image: url(esemenyek/08.png);}
-#esemeny09{background-image: url(esemenyek/09.png);}
+#esemeny1{background-image: url(esemenyek/1.png);}
+#esemeny2{background-image: url(esemenyek/random.png);
+    width: 140px;
+    height: 200px;}
+#esemeny3{background-image: url(esemenyek/3.png);}
+#esemeny4{background-image: url(esemenyek/4.png);}
+#esemeny5{background-image: url(esemenyek/5.png);}
+#esemeny6{background-image: url(esemenyek/6.png);}
+#esemeny7{background-image: url(esemenyek/7.png);}
+#esemeny8{background-image: url(esemenyek/8.png);}
+#esemeny9{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
 #esemeny10{background-image: url(esemenyek/10.png);}
 #esemeny11{background-image: url(esemenyek/11.png);}
 #esemeny12{background-image: url(esemenyek/12.png);}
 #esemeny13{background-image: url(esemenyek/13.png);}
 #esemeny14{background-image: url(esemenyek/14.png);}
-#esemeny15{background-image: url(esemenyek/15.png);}
+#esemeny15{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
 #esemeny16{background-image: url(esemenyek/16.png);}
 #esemeny17{background-image: url(esemenyek/17.png);}
 #esemeny18{background-image: url(esemenyek/18.png);}
 #esemeny19{background-image: url(esemenyek/19.png);}
 #esemeny20{background-image: url(esemenyek/20.png);}
 #esemeny21{background-image: url(esemenyek/21.png);}
-#esemeny22{background-image: url(esemenyek/22.png);}
+#esemeny22{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
 #esemeny23{background-image: url(esemenyek/23.png);}
 #esemeny24{background-image: url(esemenyek/24.png);}
 #esemeny25{background-image: url(esemenyek/25.png);}
@@ -75,11 +77,13 @@ img{
 #esemeny28{background-image: url(esemenyek/28.png);}
 #esemeny29{background-image: url(esemenyek/29.png);}
 #esemeny30{background-image: url(esemenyek/30.png);}
-#esemeny31{background-image: url(esemenyek/31.png);}
+#esemeny31{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
 #esemeny32{background-image: url(esemenyek/32.png);}
 #esemeny33{background-image: url(esemenyek/33.png);}
 #esemeny34{background-image: url(esemenyek/34.png);}
-#esemeny35{background-image: url(esemenyek/35.png);}
+#esemeny35{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
 #esemeny36{background-image: url(esemenyek/36.png);}
 #esemeny37{background-image: url(esemenyek/37.png);}
 #esemeny38{background-image: url(esemenyek/38.png);}

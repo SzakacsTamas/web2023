@@ -117,6 +117,7 @@ class jatekos {
 
     }
 
+
     ugorjIde(hova) {
       if (this.pozicio !== undefined) {
           let elozoMezo = document.getElementById("m" + this.pozicio);
@@ -129,11 +130,17 @@ class jatekos {
 
       // MEZŐ VIZSGÁLATA
       switch (hova) {
+        /* AZ ALAP AMI MINDENHOVA KELL, X HELYÉRE A MEZŐ SORSZÁMA
+        case x:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+        */
           //CASE MEZO : ESEMÉNY, VIZUÁLIS MEGJELENités
               case 1:
               this.penz -= 1000; 
               //document.getElementById("aktivEsemeny").innerHTML = '<img src="esemenyek/27.png">';
-              document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny27" class="esemenyKartya"></div>';
+              document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+              
               document.getElementById("penz").innerHTML="Egyenleg: "+this.penz+"Ft";
               break;
               //SZERENCSEKARTYA
@@ -143,12 +150,17 @@ class jatekos {
                     case 22:
                       case 31:
                         case 35:
-                          document.getElementById("aktivEsemeny").innerHTML = '<img src="penzek/500.png">';
+                          //A TÖKELETES KÓD
+                          document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
                           
-          
+                          myFunction();
+              case 3:
+              document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+              
+              
         
       }
-      document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny'+hova+'" class="esemenyKartya"></div>';
+      //document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny'+hova+'" class="esemenyKartya"></div>';
 
       
   }
@@ -163,3 +175,12 @@ jatekosok[2]=new jatekos("Gabi","figura3",75000)
 jatekosok[3]=new jatekos("Jazmin","figura4",75000)
 
 
+let timeout;
+                          function myFunction() {
+                            timeout = setTimeout(alertFunc, 500);
+                          }
+                          function alertFunc() {
+                            alert("Hello!");
+                          }
+
+  
