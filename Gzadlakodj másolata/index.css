@@ -1,0 +1,480 @@
+.jatekos{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+.jatekos.aktualis{
+    background-color: red!important;
+}
+.jatekos.elozo{
+    background-color: green!important;
+}
+
+#adatok{
+    width: 110px;
+    height: 150px;
+    position: absolute;  
+    border: 3px solid black;
+    top: 8.2px;
+    left: 570px;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    padding: 2px;
+    text-align: left;
+    background-image: url(f.png);
+    
+}
+#aktivEsemeny img{
+    width: 70px;
+    height: 100px;
+    width: 30%;
+    height: 30%;
+}
+
+.esemenyKartya{
+    width: 70px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+#esemeny1{background-image: url(esemenyek/1.png);}
+#esemeny2{background-image: url(esemenyek/random.png);
+    width: 140px;
+    height: 200px;}
+#esemeny3{background-image: url(esemenyek/3.png);}
+#esemeny4{background-image: url(esemenyek/4.png);}
+#esemeny5{background-image: url(esemenyek/5.png);}
+#esemeny6{background-image: url(esemenyek/6.png);}
+#esemeny7{background-image: url(esemenyek/7.png);}
+#esemeny8{background-image: url(esemenyek/8.png);}
+#esemeny9{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
+#esemeny10{background-image: url(esemenyek/10.png);}
+#esemeny11{background-image: url(esemenyek/11.png);}
+#esemeny12{background-image: url(esemenyek/12.png);}
+#esemeny13{background-image: url(esemenyek/13.png);}
+#esemeny14{background-image: url(esemenyek/14.png);}
+#esemeny15{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
+#esemeny16{background-image: url(esemenyek/16.png);}
+#esemeny17{background-image: url(esemenyek/17.png);}
+#esemeny18{background-image: url(esemenyek/18.png);}
+#esemeny19{background-image: url(esemenyek/19.png);}
+#esemeny20{background-image: url(esemenyek/20.png);}
+#esemeny21{background-image: url(esemenyek/21.png);}
+#esemeny22{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
+#esemeny23{background-image: url(esemenyek/23.png);}
+#esemeny24{background-image: url(esemenyek/24.png);}
+#esemeny25{background-image: url(esemenyek/25.png);}
+#esemeny26{background-image: url(esemenyek/26.png);}
+#esemeny27{background-image: url(esemenyek/27.png);}
+#esemeny28{background-image: url(esemenyek/28.png);}
+#esemeny29{background-image: url(esemenyek/29.png);}
+#esemeny30{background-image: url(esemenyek/30.png);}
+#esemeny31{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
+#esemeny32{background-image: url(esemenyek/32.png);}
+#esemeny33{background-image: url(esemenyek/33.png);}
+#esemeny34{background-image: url(esemenyek/34.png);}
+#esemeny35{background-image: url(esemenyek/random.png);width: 140px;
+    height: 200px;}
+#esemeny36{background-image: url(esemenyek/36.png);}
+#esemeny37{background-image: url(esemenyek/37.png);}
+#esemeny38{background-image: url(esemenyek/38.png);}
+#esemeny39{background-image: url(esemenyek/39.png);}
+#esemeny40{background-image: url(esemenyek/40.png);}
+
+#esemeny{
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    border: 3px solid black;
+    top: 170px;
+    left: 540px;
+    background-size: contain;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    
+    text-align: center;
+    background-image: url(h.jpg);
+   
+}
+#dobas{
+    
+    font-weight: bold;
+    
+}
+#penz{
+    
+    font-weight: bold;
+}
+
+.szalagCim{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    position: relative;
+    top: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+    
+
+.FoGomb{
+    background-color: rgb(75, 185, 61);
+    background-position: center;
+    text-align: center;
+    position: relative;
+    top: 50px; 
+    left: 33px;
+    cursor: pointer;
+    
+
+}
+#kocka{
+    background-image: url(k.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    cursor: pointer;
+}
+
+.figura1{
+    background-image: url("babuk/figura1.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura2{
+    background-image: url("babuk/figura2.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura3{
+    background-image: url("babuk/figura3.png");
+    background-size: cover;
+    background-color: white;
+}
+.figura4{
+    background-image: url("babuk/figura4.png");
+    background-size: cover;
+    background-color: white;
+}
+
+
+#tabla{
+    background-image: url("hatter.jpg");
+    height: 320px;
+    width: 500px;
+    background-size: cover;
+    border: 3px solid black;
+}
+
+
+#minden{
+    width: 500px;
+}
+
+
+/* 31 a váltószám*/
+#m0{
+    width: 65px;
+    height: 77px;
+    position: absolute;
+    top: 272px;
+    left: 437px;
+}
+#m1{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 407px;
+}
+#m2{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 376.5px;
+}
+#m3{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 345.5px;
+}
+#m4{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 314.8px;
+}
+#m5{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 283.8px;
+}
+#m6{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 254px;
+}
+#m7{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 224px;
+}
+#m8{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 193px;
+}
+#m9{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 163px;
+}
+#m10{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 132px;
+}
+#m11{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 102px;
+}
+#m12{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 271px;
+    left: 71px;
+}
+#m13{
+    width: 60px;
+    height: 77px;
+
+    position: absolute;
+    top: 271px;
+    left: 11px;
+
+   
+}#m14{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 216px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m15{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 186px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m16{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 156px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m17{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 126px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m18{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 96px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m19{
+    width: 30px;
+    height: 77px;
+    
+    position: absolute;
+    top: 67px;
+    left: 30px;
+    transform: rotate(90deg);
+}#m20{
+    width: 90px;
+    height: 77px;
+
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    transform: rotate(180deg);
+}#m21{
+    width: 30px;
+    height: 77px;
+    
+    position: absolute;
+    top: 15px;
+    left: 75px;
+    transform: rotate(180deg);
+}#m22{
+    width: 30px;
+    height: 77px;
+
+    position: absolute;
+    top: 15px;
+    left: 105px;
+    transform: rotate(180deg);
+}#m23{
+    width: 90px;
+    height: 77px;
+    position: absolute;
+    top: 15px;
+    left: 135px;
+    transform: rotate(180deg);
+}#m24{
+    width: 30px;
+    height: 77px;
+
+    position: absolute;
+    top: 68px;
+    left: 165px;
+    transform: rotate(270deg);
+}#m25{
+    width: 90px;
+    height: 65px;
+    position: absolute;
+    top: 120px;
+    left: 133px;
+    transform: rotate(180deg);
+}#m26{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 108px;
+    left: 224px;
+    transform: rotate(180deg);
+}#m27{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 108px;
+    left: 254px;
+    transform: rotate(180deg);
+}#m28{
+    width: 90px;
+    height: 65px;
+    position: absolute;
+    top: 123px;
+    left: 285px;
+    transform: rotate(180deg);
+}#m29{
+    width: 30px;
+    height: 85px;
+    
+    position: absolute;
+    top: 65px;
+    left: 310px;
+    transform: rotate(90deg);
+}#m30{
+    width: 90px;
+    height: 65px;
+    position: absolute;
+    top: 20px;
+    left: 285px;
+    transform: rotate(180deg);
+}#m31{
+    width: 30px;
+    height: 78px;
+    
+    position: absolute;
+    top: 15px;
+    left: 376px;
+    transform: rotate(180deg);
+}#m32{
+    width: 30px;
+    height: 78px;
+    
+    position: absolute;
+    top: 15px;
+    left: 405px;
+    transform: rotate(180deg);
+}#m33{
+    width: 65px;
+    height: 78px;
+    
+    position: absolute;
+    top: 15px;
+    left: 435px;
+    transform: rotate(180deg);
+}#m34{
+    width: 30px;
+    height: 77px;
+
+    position: absolute;
+    top: 70px;
+    left: 447px;
+    transform: rotate(270deg);
+}#m35{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 100px;
+    left: 447px;
+    transform: rotate(270deg);
+}#m36{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 130px;
+    left: 447px;
+    transform: rotate(270deg);
+}#m37{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 160px;
+    left: 447px;
+    transform: rotate(270deg);
+}#m38{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 190px;
+    left: 447px;
+    transform: rotate(270deg);
+}#m39{
+    width: 30px;
+    height: 77px;
+    position: absolute;
+    top: 220px;
+    left: 447px;
+    transform: rotate(270deg);}

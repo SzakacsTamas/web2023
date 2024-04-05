@@ -32,7 +32,7 @@ function init(){
 
 let dobottKor = 1; // változó a jelenlegi körben már dobott játékosok követésére
 let korokSzama=0;
-function rollDice() {
+function dobas() {
   
     if (dobottKor>0) { // csak akkor dobhat, ha még nem dobott ebben a körben
         let dobottErtek = kocka();
@@ -156,6 +156,41 @@ class jatekos {
                           myFunction();
               case 3:
               document.getElementById("aktivEsemeny").innerHTML = '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+              case 4:
+                document.getElementById("aktivEsemeny").innerHTML =
+                 '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+              case 5:
+                  document.getElementById("aktivEsemeny").innerHTML =
+                  '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                      case 6:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 7:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 8:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 10:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 11:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 12:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 13:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 14:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+                       case 16:
+              document.getElementById("aktivEsemeny").innerHTML =
+               '<div id="esemeny' + hova + '" class="esemenyKartya"></div>';
+              
+            
               
               
         
