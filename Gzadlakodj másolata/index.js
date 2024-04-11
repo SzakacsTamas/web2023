@@ -204,24 +204,11 @@ class jatekos {
 
 const jatekosok=[];
 
-jatekosok[0]=new jatekos(prompt("Kérem adja meg a(z) 1. játékos nevét"),"figura1",75000)
-jatekosok[1]=new jatekos(prompt("Kérem adja meg a(z) 2. játékos nevét"),"figura2",75000)
-jatekosok[2]=new jatekos(prompt("Kérem adja meg a(z) 3. játékos nevét"),"figura3",75000)
-jatekosok[3]=new jatekos(prompt("Kérem adja meg a(z) 4. játékos nevét"),"figura4",75000)
+jatekosok[0]=new jatekos("Tomi","figura1",75000)
+jatekosok[1]=new jatekos("Petya","figura2",75000)
+jatekosok[2]=new jatekos("Gabi","figura3",75000)
+jatekosok[3]=new jatekos("Jazmin","figura4",75000)
 
-/*
-let jatekosokSzama = parseInt(prompt("Kérem, adja meg a játékosok számát:"));
-
-if (!isNaN(jatekosokSzama)) {
-    const jatekosok = [];
-
-    for (let i = 0; i < jatekosokSzama; i++) {
-        let nev = prompt("Kérem adja meg a(z) " + (i + 1) + ". játékos nevét:");
-        jatekosok.push(new jatekos(nev, "figura" + (i + 1), 75000));
-    }
-
-
-*/
 
 let timeout;
                           function myFunction() {
