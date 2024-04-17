@@ -141,9 +141,9 @@ INSERT INTO tantargy (nev)
 ALTER TABLE eredeti ADD tantargyid int; 
 
 SELECT tantargy.id FROM tantargy, eredeti WHERE nev = tantargy;
-
+/*
 UPDATE eredeti 
 	SET tantargyid = (SELECT tantargy.id FROM tantargy, eredeti WHERE nev = tantargy)
 	WHERE tantargy = (SELECT tantargy.id FROM tantargy, eredeti WHERE nev = tantargy LIMIT 1);
-
+*/
 SELECT tantargy, nev FROM tantargy, eredeti WHERE tantargy.id = tantargyid;
