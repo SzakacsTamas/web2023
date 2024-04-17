@@ -6,3 +6,9 @@ USE forma1;
 /*tabla*/
 
 /*adatok*/
+
+/*3.Feldat*/
+CREATE INDEX pnev ON pilotak (pnev);
+
+/*5 Feladat*/
+SELECT * FROM versenyek WHERE vnev="Német Nagydij";
