@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    
+    <script>
+ 
+    let bekeres = prompt("Kérjen be egy karaktersorozatot");
+    let tagolt="";
+   
+
+
+    for (let i = 0; i < bekeres.length; i++) {
+        //Sem sima " "-val, sem pedig "\t"-vel nem működött, valamiért nem kezdte beljebb soha, mintha nem érzékelte
+        //volna a whitespaceket, Stackoverflowon találtam ezt. Non-breaking space.
+        tagolt+='&nbsp;'.repeat(i) + bekeres[i] + "<br>"; 
+    }
+    document.getElementById("div").innerHTML=tagolt
+    </script>
+    
+   
+</body>
+</html>
