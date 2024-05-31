@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="szam">cm: </label>
+        <input type="text" id="szam" name="szam"><br>
+        
+    </form>
+    <button onclick="asd()">szamol</button>
+    <script>
+        function asd()
+        {
+            let a=parseFloat(document.getElementById("szam").value)
+            let b =a*2.54
+            document.getElementById("div").innerHTML=b+" hüvelyk";
+        }
+        
+    </script>
+    <div id="div"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    
+    <script>
+        let bekeres;
+        let eredmeny=0;
+        do {
+            bekeres= parseInt(prompt("Kérjen be számot 0 végjelig"))
+            if (bekeres>49 || bekeres==0){
+                eredmeny+=bekeres
+            }
+            else{
+            alert("Hiba")
+        }
+        }
+        while (bekeres!=0);
+        
+   
+        document.getElementById("div").innerHTML="A számok összege: "+eredmeny;
+
+        
+        
+     
+    </script>
+    
+   
+</body>
+</html>

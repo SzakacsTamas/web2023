@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Gondoltam egy számra 0 és 9 között. Találd ki!</div>
+    <form>
+        <label for="szam">Tipp: </label>
+        <input type="number" id="szam" name="szam"><br>
+        
+        
+    </form>
+    <button onclick="asd()">Ellenőrzés</button>
+    <script>
+        let gep=Math.floor(Math.random() * 10);
+        function asd()
+        {
+            let a=(document.getElementById("szam").value)
+            
+            
+            if(a<9 && a>-1){
+            if(a==gep){
+                document.getElementById("div").innerHTML="Eltaláltad!"
+            }
+            else{
+                document.getElementById("div").innerHTML="Nem talált."
+            }
+            }
+            else{
+                document.getElementById("div").innerHTML="Csak 0-9 között tippelj!!"
+            }
+            let terfogat=(1/3)*t*h
+            
+            
+        }
+    </script>
+    <div id="div"></div>
+   
+</body>
+</html>

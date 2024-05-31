@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="szam">alap hossza: </label>
+        <input type="text" id="szam" name="szam"><br>
+        <label for="szam1">magasság hossza: </label>
+        <input type="text" id="szam1" name="szam1"><br>
+        
+    </form>
+    <button onclick="asd()">szamol</button>
+    <script>
+        function asd()
+        {
+            let a=parseFloat(document.getElementById("szam").value)
+            let b=parseFloat(document.getElementById("szam1").value)
+            document.getElementById("div").innerHTML="Terület: "+((a*b)/2)
+        }
+    </script>
+    <div id="div"></div>
+</body>
+</html>

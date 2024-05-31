@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="t">alapterület: </label>
+        <input type="text" id="t" name="t"><br>
+        <label for="h">magasság: </label>
+        <input type="text" id="h" name="head"><br>
+        
+    </form>
+    <button onclick="asd()">szamol</button>
+    <script>
+        function asd()
+        {
+            let t=parseFloat(document.getElementById("t").value)
+            let h=parseFloat(document.getElementById("h").value)
+            let terfogat=(1/3)*t*h
+            document.getElementById("div1").innerHTML="Térfogat: "+terfogat;
+            document.getElementById("div2").innerHTML="Terület: "+((1/3)*terfogat**2*3.14159265359*h)
+        }
+    </script>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

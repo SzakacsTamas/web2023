@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <div id="div1"></div>
+    <script>
+        let bekeres;
+        const szamok=[];
+        do {
+            bekeres= parseInt(prompt("Kérjen be számot 0 végjelig"))
+            szamok.push(bekeres);
+        }
+        while (bekeres!=0);
+        szamok.pop();
+        
+        //Én úgy értelmeztem hogy a 0 ne legyen benne, szerintem igy van értelme a programnak
+        
+        document.getElementById("div").innerHTML="A bekért számokok közül a legnagyobb="+Math.max(...szamok);
+        document.getElementById("div1").innerHTML="A bekért számokok közül a legkisebb="+Math.min(...szamok);
+       //a ... segít hogy ne kelljen a tömböt lebontani, igy gyorsabb.
+    </script>
+    
+   
+</body>
+</html>

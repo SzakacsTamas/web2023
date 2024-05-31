@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="nagyBetu">Kérj be egy nagybetűt: </label>
+        <input type="text" id="nagyBetu" name="nagyBetu"><br>
+
+        
+    </form>
+    <button onclick="asd()">Kisbetű</button>
+    <script>
+        function asd()
+        {
+            
+            let a=(document.getElementById("nagyBetu").value)
+            
+            document.getElementById("div").innerHTML=a.toLowerCase();
+            
+        }
+    </script>
+    <div id="div"></div>
+</body>
+</html>

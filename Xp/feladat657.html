@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="szoveg">Kérj be egy nagybetűt: </label>
+        <input type="text" id="szoveg" name="szoveg"><br>
+
+        
+    </form>
+    <button onclick="asd()">Varázslat</button>
+    <script>
+        function asd()
+        {
+            
+            let a=(document.getElementById("szoveg").value)
+            if(a.includes(" ")){
+                let b=a.replace(" ","");
+            }
+            
+            document.getElementById("div").innerHTML=b
+            
+        }
+    </script>
+    <div id="div"></div>
+</body>
+</html>
