@@ -18,9 +18,8 @@
         {
             
             let a=(document.getElementById("szoveg").value)
-            if(a.includes(" ")){
-                let b=a.replace(" ","");
-            }
+            let b=a.replaceAll(" ","");
+
             
             document.getElementById("div").innerHTML=b
             
